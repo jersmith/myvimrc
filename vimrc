@@ -56,14 +56,18 @@ set list listchars=trail:.,extends:>
 " Windows has this
 set guifont=Consolas:h10
 
+" status line
 set statusline=%f\ %r%m           " Path to the file
 set statusline+=%=                " Switch to the right side
 set statusline+=0x%B\ [%4l/%-4L]  " Current line out of total
 set laststatus=2                  " Show the status line always
 
+" netrw settings
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_winsize = 30
 
 call camelcasemotion#CreateMotionMappings(',')
 
+" Map toggle last buffer
+nmap <C-e> :b#<CR>
