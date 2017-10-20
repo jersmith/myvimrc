@@ -3,7 +3,9 @@ set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
 " ruler
-set ruler
+"set ruler
+"
+
 " disable vi compatibility (emulation of old bugs)
 set nocompatible
 " disable swap files
@@ -57,10 +59,15 @@ set list listchars=trail:.,extends:>
 set guifont=Consolas:h10
 
 " status line
-set statusline=%f\ %r%m           " Path to the file
-set statusline+=%=                " Switch to the right side
-set statusline+=0x%B\ [%4l/%-4L]  " Current line out of total
 set laststatus=2                  " Show the status line always
+
+" Use lightline for configuring the status line
+" lightline puts the mode in the status line
+set noshowmode
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 
 " netrw settings
 let g:netrw_liststyle = 3
