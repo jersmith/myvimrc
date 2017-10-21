@@ -44,10 +44,22 @@ set hlsearch
 set incsearch
 " This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
+
 " Turn on plugins
 filetype plugin on
-" Use Pathogen for plugins
+" Use Pathogen for plugins if possible
 execute pathogen#infect()
+
+" Use vim-plug for all the others
+call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
+
+" This is the most useful fzf command
+nmap <leader>b :Buffers<CR>
 
 " Setup jsBeautify
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
