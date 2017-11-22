@@ -58,8 +58,12 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
-" This is the most useful fzf command
+" These are the most useful fzf commands
 nmap <leader>b :Buffers<CR>
+nmap <leader>f :Files<CR>
+
+" Set ack.vim to use ag
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Setup jsBeautify
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
