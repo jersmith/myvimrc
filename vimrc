@@ -26,14 +26,6 @@ set textwidth=120
 set t_Co=256
 syntax on
 colorscheme koehler
-" turn line numbers on
-:set number relativenumber
-
-:augroup numbertoggle
-:  autocmd!
-:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-:augroup END
 
 " highlight matching braces
 set showmatch
@@ -44,30 +36,6 @@ set hlsearch
 set incsearch
 " This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
-
-" Turn on plugins
-filetype plugin on
-" Use Pathogen for plugins if possible
-execute pathogen#infect()
-
-" Use vim-plug for all the others
-call plug#begin('~/.vim/plugged')
-
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
-call plug#end()
-
-" These are the most useful fzf commands
-nmap <leader>b :Buffers<CR>
-nmap <leader>f :Files<CR>
-
-" Set ack.vim to use ag
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
-" Setup jsBeautify
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
 
 " Show trailing whitespace
 set list listchars=trail:.,extends:>
@@ -85,12 +53,12 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
 
+
 " netrw settings
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_winsize = 30
 
-call camelcasemotion#CreateMotionMappings(',')
-
 " Map toggle last buffer
 nmap <C-e> :b#<CR>
+
