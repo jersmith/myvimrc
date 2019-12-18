@@ -2,10 +2,9 @@
 set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
-" ruler
-"set ruler
-"
 
+" show line numbers
+set number
 " disable vi compatibility (emulation of old bugs)
 set nocompatible
 " disable swap files
@@ -59,6 +58,45 @@ let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_winsize = 30
 
-" Map toggle last buffer
-nmap <C-e> :b#<CR>
 
+" let mapleader = ","
+
+
+" Map toggle last buffer
+nnoremap <C-e> :b#<CR>
+
+" Toggle uppercase/lowercase for current word
+inoremap <c-h> <esc>viw~ea
+nnoremap <c-h> viw~e
+
+" Wrap selected text in single quotes
+vnoremap <leader>' <esc>`>a'<esc>`<i'<esc>`>w
+
+" --------------------------------------------------------
+" Fuzzy Finder
+" --------------------------------------------------------
+"
+" We're not using Plug, and we installed via git:
+"
+" git clone https://github.com/junegunn/fzf.git .fzf
+" git clone https://github.com/junegunn/fzf.vim.git .fzf.vim
+"
+" .fzf/install --all
+"
+" Also we're using Silver Searcher instead of find to do the
+" searching, see .bashrc
+"
+set rtp+=~/.fzf
+so ~/.fzf/plugin/fzf.vim
+
+set rtp+=~/.fzf.vim
+so ~/.fzf.vim/plugin/fzf.vim
+
+nnoremap <leader>b :Buffers<cr>
+nnoremap <leader>f :Files<cr>
+
+
+echo '------'
+echo '>^.^<'
+echo '------'
+echo 'Beta'
