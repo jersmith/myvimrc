@@ -40,6 +40,11 @@ function package () {
   fi
 }
 (
+set_group formatting
+package https://github.com/editorconfig/editorconfig-vim.git &
+wait
+) &
+(
 set_group syntax
 package https://github.com/tpope/vim-markdown.git &
 package https://github.com/ap/vim-css-color.git &
