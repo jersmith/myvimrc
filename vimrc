@@ -3,6 +3,7 @@ set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
 
+
 " show line numbers
 set number
 " disable vi compatibility (emulation of old bugs)
@@ -58,6 +59,9 @@ let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_winsize = 30
 
+" Per default, netrw leaves unmodified buffers open. This autocommand
+" deletes netrw's buffer once it's hidden (using ':q', for example)
+autocmd FileType netrw setl bufhidden=delete
 
 " let mapleader = ","
 
