@@ -42,6 +42,7 @@ function package () {
 (
 set_group formatting
 package https://github.com/editorconfig/editorconfig-vim.git &
+package https://github.com/bkad/CamelCaseMotion.git &
 wait
 ) &
 (

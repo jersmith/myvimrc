@@ -65,6 +65,8 @@ autocmd FileType netrw setl bufhidden=delete
 
 " let mapleader = ","
 
+let g:camelcasemotion_key = ','
+
 
 " Map toggle last buffer
 nnoremap <C-e> :b#<CR>
