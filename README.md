@@ -17,7 +17,7 @@
 
     ```
     git clone https://github.com/junegunn/fzf.git .fzf
-    git clone https://github.com/junegunn/fzf.vim.git
+    git clone https://github.com/junegunn/fzf.vim.git .fzf.vim
     ./.fzf/install --all
     ```
 
