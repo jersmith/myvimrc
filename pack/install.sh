@@ -51,6 +51,7 @@ set_group syntax
 package https://github.com/tpope/vim-markdown.git &
 package https://github.com/ap/vim-css-color.git &
 package https://github.com/mustache/vim-mustache-handlebars.git &
+package https://github.com/leafgarland/typescript-vim.git
 wait
 ) &
 (
