@@ -34,7 +34,7 @@
 
 `sudo apt-get install vim`
 
-`git clone https://github.com/jersmith/myvimrc.git .vim`
+`git clone git@github.com:jersmith/myvimrc.git .vim`
 
 `cd .vim`
 
