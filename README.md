@@ -40,5 +40,18 @@
 
 `./pack/install.sh`
 
+## neovim
+
+You can use this as-is by adding this file:
+
+`~/.config/nvim/init.vim`
+
+with these contents:
+
+```
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
+source ~/.vim/vimrc
+```
 
 
